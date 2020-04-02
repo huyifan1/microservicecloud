@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
-			<version>1.4.3.RELEASE</version>
+			<version>1.4.7.RELEASE</version>
 		</dependency>
 		<!-- 避免Config的Git插件报错：org/eclipse/jgit/api/TransportConfigCallback -->
 		<dependency>
