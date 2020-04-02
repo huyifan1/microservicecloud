@@ -9,7 +9,7 @@ Consumer消费者（Client）通过Rest调用Provider提供者（Service）提�
 服务消费者Consumer
 
 
-1 Eureka服务注册
+【1】Eureka服务注册
 microservicecloud-eureka-7001
 microservicecloud-provider-dept-8001
 2 Eureka服务发现
