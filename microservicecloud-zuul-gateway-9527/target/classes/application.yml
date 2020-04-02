@@ -1,0 +1,43 @@
+server: 
+  port: 9527
+ 
+spring: 
+  application:
+    name: microservicecloud-zuul-gateway
+ 
+zuul: 
+  prefix: /hyf
+  ignored-services: "*"
+  routes: 
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+    
+#假设你的注册服务中心有三个已经注册的服务名称A，B，C
+#但是你在zuul网管服务器中的只隐射了A和B，如下
+#zuul:
+#routes:
+#a:
+#path: /a/**
+#serviceId:  a
+#b:
+#path: /b/**
+#serviceId:  b
+##因为zuul有默认的隐射机制，如果没有以下的配置，那么访问http://ip:port/c/也可以访问到你的c服务，如果你不想向外界暴露除你配置的隐射之外的服务，可以加上zuul.ignored-services:*
+#ignored-services: ‘*’
+  
+    
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true 
+ 
+info:
+  app.name: atguigu-microcloud
+  company.name: www.atguigu.com
+  build.artifactId: microservicecloud-zuul-gateway-9527
+  build.version: 0.0.1-SNAPSHOT
+ 
