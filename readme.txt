@@ -77,10 +77,10 @@ microservicecloud-zuul-gateway-9527
 
 【10】SpringCloud Config服务端从GitHub上获取配置
 microservicecloud-config-3344
-11 客户端3355访问（服务端3344从GitHub上获取配置信息）
+【11】客户端3355访问（服务端3344从GitHub上获取配置信息）
 microservicecloud-config-client-3355
 microservicecloud-config-3344
-12 Consumer通过Eureka服务访问Dept。（Dept通过Config服务端注册到Eureka）
+【12】Consumer通过Eureka服务访问Dept（Dept通过Config服务端注册到Eureka）
 microservicecloud-config-consumer-dept-client-80
 microservicecloud-config-dept-client-8001
 microservicecloud-config-eureka-client-7001
